@@ -8,13 +8,14 @@ export async function addUserAction(prevState: any, formData: FormData) {
       method: 'POST',
       body: formData,
     };
+    console.log("addUserAction.ts");
     const response = await fetch('http://127.0.0.1:8080/api/v1/user/add', requestOptions);
 
     // Проверяем статус ответа
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
-    console.log("response: ", response);
+    console.log("addUserAction.ts response: ", response);
     revalidatePath("/");
     return {
       data: "ok",
@@ -23,6 +24,7 @@ export async function addUserAction(prevState: any, formData: FormData) {
       success: true,
     };
   } catch (error) {
+    console.log("addUserAction.ts error ", error);
     return {
       data: undefined,
       error: undefined,
