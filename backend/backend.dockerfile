@@ -20,4 +20,5 @@ RUN apk --no-cache add vips
 
 COPY --from=builder /app/.env /
 COPY --from=builder /app/bin/serverApp /
+EXPOSE 8080
 CMD ["/serverApp"]
