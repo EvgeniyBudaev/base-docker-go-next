@@ -56,3 +56,9 @@ Errors
 ```
 go get -u github.com/pkg/errors
 ```
+
+Check container
+```
+apk add curl
+curl http://127.0.0.1:8080/api/v1/user/add
+```
