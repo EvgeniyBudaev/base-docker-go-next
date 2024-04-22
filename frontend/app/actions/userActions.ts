@@ -3,7 +3,6 @@
 import {revalidatePath} from "next/cache";
 
 export async function addUserAction(prevState: any, formData: FormData) {
-  console.log("addUserAction.ts");
   try {
     let contentType: { "Content-Type"?: string } = {
       "Content-Type": "application/json",
@@ -14,8 +13,9 @@ export async function addUserAction(prevState: any, formData: FormData) {
         ...contentType,
       },
     };
-    const response = await fetch('http://127.0.0.1:8080/api/v1/user/add', requestOptions);
-    console.log("addUserAction.ts response.ok: ", response.ok);
+    console.log("addUserAction.ts");
+    //const response = await fetch('http://127.0.0.1:8080/api/v1/user/add', requestOptions);
+    const response = await fetch('http://backend:8080/api/v1/user/add', requestOptions);
 
     // Проверяем статус ответа
     if (!response.ok) {

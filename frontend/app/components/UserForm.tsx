@@ -18,7 +18,7 @@ export const UserForm: FC = () => {
   );
 
   return (
-    <form action={formAction} className="UserForm">
+    <form action={formAction}>
       <button type="submit">Отправить</button>
     </form>
   )
