@@ -15,7 +15,7 @@ func (app *App) StartHTTPServer(ctx context.Context) error {
 	uc := userUseCase.NewUseCaseUser(app.Logger)
 	uh := userHandler.NewHandlerUser(app.Logger, uc)
 	grp := app.fiber.Group(prefix)
-	grp.Post("/user/add", uh.AddProfileHandler())
+	grp.Get("/user/add", uh.AddProfileHandler())
 	go func() {
 		if err := app.fiber.Listen(app.config.Port); err != nil {
 			app.Logger.Fatal("error func StartHTTPServer, method Listen by path internal/app/http.go", zap.Error(err))

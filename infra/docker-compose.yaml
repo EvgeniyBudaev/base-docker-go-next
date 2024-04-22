@@ -40,3 +40,7 @@ services:
 #    driver: bridge
 #  backend:
 #    driver: bridge
+
+#networks:
+#  host:
+#    external: true
