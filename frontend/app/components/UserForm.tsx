@@ -19,7 +19,7 @@ export const UserForm: FC = () => {
 
   return (
     <form action={formAction}>
-      <button type="submit">Отправить</button>
+      <button type="submit">Get data</button>
     </form>
   )
 }

@@ -4,18 +4,20 @@ import {revalidatePath} from "next/cache";
 
 export async function addUserAction(prevState: any, formData: FormData) {
   try {
+    const body = JSON.stringify(Object.fromEntries(formData));
     let contentType: { "Content-Type"?: string } = {
       "Content-Type": "application/json",
     };
     const requestOptions = {
-      method: 'GET',
+      method: 'POST',
       headers: {
         ...contentType,
       },
+      body: body,
     };
     console.log("addUserAction.ts");
-    //const response = await fetch('http://127.0.0.1:8080/api/v1/user/add', requestOptions);
-    const response = await fetch('http://backend:8080/api/v1/user/add', requestOptions);
+    const url = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/user/add`;
+    const response = await fetch(url, requestOptions);
 
     // Проверяем статус ответа
     if (!response.ok) {

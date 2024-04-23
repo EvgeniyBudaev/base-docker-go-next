@@ -17,3 +17,7 @@ func NewUseCaseUser(l logger.Logger) *UseCaseUser {
 func (u *UseCaseUser) Add() error {
 	return nil
 }
+
+func (u *UseCaseUser) Find() error {
+	return nil
+}
