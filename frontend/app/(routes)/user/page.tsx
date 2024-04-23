@@ -13,7 +13,7 @@ async function loader() {
                 ...contentType,
             },
         };
-        const url = `http://127.0.0.1:8000/api/v1/user`;
+        const url = `http://localhost:3000/api/v1/user`;
         const response = await fetch(url, requestOptions);
 
         // Проверяем статус ответа
