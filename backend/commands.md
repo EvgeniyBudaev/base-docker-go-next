@@ -62,3 +62,13 @@ Check container
 apk add curl
 curl http://127.0.0.1:8080/api/v1/user/add
 ```
+
+Stop process
+```
+sudo lsof -i :15672
+sudo lsof -i :5432
+sudo lsof -i :3000
+sudo lsof -i :80
+sudo kill -9 $(sudo lsof -t -i:80)
+sudo kill PID_number
+```

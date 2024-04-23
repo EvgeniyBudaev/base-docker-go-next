@@ -42,11 +42,15 @@ export default function Home() {
           />
         </div>
         <div className={styles.block}>
-          <UserForm />
+          <UserForm/>
         </div>
-        <hr />
+        <hr/>
         <div className={styles.block}>
           <Link className={styles.link} href={"/user"}>go to user detail page</Link>
+        </div>
+        <hr/>
+        <div className={styles.block}>
+          <Link className={styles.link} href={"/profile"}>go to profile detail page</Link>
         </div>
       </div>
     </main>
