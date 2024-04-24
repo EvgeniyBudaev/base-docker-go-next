@@ -176,3 +176,15 @@ docker rmi -f $(docker images -q)
 docker build . # Соберёт образ на основе Dockerfile
 docker image ls # Отобразит информацию обо всех образах
 ```
+
+SSH-ключ для доступа на сервер
+Создание новго ключа
+```
+ssh-keygen -t rsa
+Enter passphrase (empty for no passphrase): жмем Enter
+cat ~/.ssh/id_rsa.pub
+```
+Добавление ключа на удаленный сервер
+```
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@91.236.199.58
+```
