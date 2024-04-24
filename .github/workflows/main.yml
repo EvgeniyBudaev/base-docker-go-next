@@ -41,6 +41,8 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/gonext_web:v1
-            ls -la
+            pwd
+            cd infra
+            pwd
             sudo docker-compose stop
             sudo docker-compose up -d --build
