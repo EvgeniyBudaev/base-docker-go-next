@@ -184,6 +184,7 @@ ssh-keygen -t rsa
 Enter passphrase (empty for no passphrase): жмем Enter
 cat ~/.ssh/id_rsa.pub
 ```
+
 Добавление ключа на удаленный сервер
 ```
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@91.236.199.58
