@@ -205,6 +205,7 @@ cat ~/.ssh/id_rsa.pub
 ```
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@158.160.90.159
 ```
+
 Зайти на удаленный сервер
 ```
 ssh budaev799@158.160.90.159
