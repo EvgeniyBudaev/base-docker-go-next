@@ -16,8 +16,8 @@ services:
   web:
     container_name: web
     build:
-      context: ../frontend
-      dockerfile: ../frontend/frontend.dockerfile
+      context: ../web
+      dockerfile: ../web/web.dockerfile
     restart: always
     ports:
       - "3000:3000"
