@@ -13,7 +13,7 @@ async function loader() {
                 ...contentType,
             },
         };
-        const url = `http://192.168.0.19:3000/api/v1/user`;
+        const url = `http://91.236.199.58:3000/api/v1/user`;
         const response = await fetch(url, requestOptions);
 
         // Проверяем статус ответа
