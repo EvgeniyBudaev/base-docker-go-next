@@ -170,3 +170,9 @@ docker rm -f $(docker ps -a -q)
 ```
 docker rmi -f $(docker images -q)
 ```
+
+Сборка docker-образа
+```
+docker build . # Соберёт образ на основе Dockerfile
+docker image ls # Отобразит информацию обо всех образах
+```
