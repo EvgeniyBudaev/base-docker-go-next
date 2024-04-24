@@ -39,7 +39,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
-          privateKey: ${{ secrets.SSH_KEY }}
+          privateKey: ${{ secrets.PRIVATE_SSH_KEY }}
           script: |
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/gonext_web:v1
             sudo docker-compose stop
