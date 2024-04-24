@@ -7,8 +7,8 @@ services:
       context: ../backend
       dockerfile: ../backend/backend.dockerfile
     restart: always
-#    ports:
-#      - "8000:8000"
+    ports:
+      - "8000:8000"
     deploy:
       mode: replicated
       replicas: 1

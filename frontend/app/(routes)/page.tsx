@@ -52,6 +52,10 @@ export default function Home() {
         <div className={styles.block}>
           <Link className={styles.link} href={"/profile"}>go to profile detail page</Link>
         </div>
+        <hr/>
+        <div className={styles.block}>
+          <Link className={styles.link} href={"/settings"}>go to settings detail page</Link>
+        </div>
       </div>
     </main>
   );
