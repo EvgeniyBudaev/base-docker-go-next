@@ -12,8 +12,6 @@ services:
     deploy:
       mode: replicated
       replicas: 1
-#    networks:
-#      - app-network
 
   web:
     container_name: web
@@ -28,8 +26,7 @@ services:
 #      - /app/node_modules
     depends_on:
       - backend
-#    networks:
-#      - app-network
+
 
   nginx:
     image: nginx:1.19.3
@@ -41,10 +38,3 @@ services:
     depends_on:
       - web
       - backend
-#    networks:
-#      - app-network
-
-#networks:
-#  app-network:
-#    driver: bridge
-#    external: true
