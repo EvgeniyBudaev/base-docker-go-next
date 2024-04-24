@@ -19,7 +19,7 @@ services:
     container_name: web
 #    build:
 #      context: ../web
-#      dockerfile: ../web/web.dockerfile
+#      dockerfile: ../web/Dockerfile
     restart: always
 #    ports:
 #      - "3000:3000"
