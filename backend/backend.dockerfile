@@ -1,10 +1,8 @@
 # https://docs.docker.com/language/golang/build-images/
 # base go image
-FROM golang:1.22.1-alpine as builder
+FROM golang:1.22.1 as builder
 
 WORKDIR /app
-
-RUN apk --no-cache add bash git make gcc musl-dev
 
 # dependencies
 COPY ["go.mod", "go.sum", "./"]
@@ -14,11 +12,9 @@ RUN go mod download
 COPY . .
 RUN CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o ./bin/serverApp ./cmd
 
-FROM alpine:latest
-
-RUN apk --no-cache add vips
+FROM debian:latest
 
 COPY --from=builder /app/.env /
 COPY --from=builder /app/bin/serverApp /
-EXPOSE 8080
+
 CMD ["/serverApp"]
