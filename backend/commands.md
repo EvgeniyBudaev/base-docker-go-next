@@ -72,3 +72,35 @@ sudo lsof -i :80
 sudo kill -9 $(sudo lsof -t -i:80)
 sudo kill PID_number
 ```
+
+--- SERVER ---
+
+Установка Go на сервере ubuntu
+https://timeweb.cloud/tutorials/go/ustanovka-go-na-ubuntu
+```
+wget https://go.dev/dl/go1.21.1.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.21.1.linux-amd64.tar.gz
+sudo nano ~/.profile
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/goproject
+export PATH=$PATH:$GOPATH/bin
+source ~/.profile
+mkdir $HOME/goproject
+go version
+```
+
+Удаление директории с файлами
+```
+rm -rf go1.21.1.linux-amd64.tar.gz
+```
+
+Установка Node.js на сервере ubuntu
+https://selectel.ru/blog/tutorials/how-to-install-node-js-on-ubuntu-20-04/
+```
+sudo apt update
+sudo apt install build-essential checkinstall libssl-dev
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | sudo bash
+. .bashrc
+nvm --help
+nvm install 21.7.3
+```
