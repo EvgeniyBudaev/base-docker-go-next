@@ -6,7 +6,8 @@ import {Environment} from "@/app/environment";
 import styles from "./page.module.css";
 
 export default function Home() {
-  const env = Environment?.NEXT_PUBLIC_API_URL ?? "undefined";
+  const apiUrl = Environment?.NEXT_PUBLIC_API_URL ?? "undefined";
+  const nodeEnv = Environment?.NEXT_PUBLIC_NODE_ENV ?? "undefined";
 
   return (
     <main className={styles.main}>
@@ -46,11 +47,15 @@ export default function Home() {
           />
         </div>
         <div className={styles.block}>
-          <h4>Server ENV: {env}</h4>
+          <h4>Server NEXT_PUBLIC_API_URL: {apiUrl}</h4>
         </div>
         <hr/>
         <div className={styles.block}>
-          <ClientEnv />
+          <h4>Server NEXT_PUBLIC_NODE_ENV: {nodeEnv}</h4>
+        </div>
+        <hr/>
+        <div className={styles.block}>
+          <ClientEnv/>
         </div>
         <hr/>
         <div className={styles.block}>
