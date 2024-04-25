@@ -38,7 +38,8 @@ RUN \
 FROM base AS runner
 WORKDIR /app
 
-ENV NODE_ENV production
+ENV NEXT_PUBLIC_NODE_ENV production
+ENV NEXT_PUBLIC_API_URL http://backend:8000
 # Uncomment the following line in case you want to disable telemetry during runtime.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
