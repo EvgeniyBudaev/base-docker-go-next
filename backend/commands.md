@@ -183,6 +183,12 @@ sudo docker volume ls
 ```
 sudo docker rm container_id
 ```
+
+Удаление образа
+```
+sudo  docker image rm id_image
+```
+
 Удаление всех контейнеров
 ```
 sudo docker rm -f $(docker ps -a -q)
@@ -232,7 +238,7 @@ ssh budaev799@158.160.90.159
 нахождения файла, нужно создать на сервере mkdir nginx):
 ```
 scp docker-compose.yml budaev799@158.160.90.159:/home/budaev799/docker-compose.yml
-scp default.conf budaev799@<host>:/home/budaev799/nginx/default.conf
+scp nginx.conf budaev799@158.160.90.159:/home/budaev799/nginx.conf
 ```
 
 Удаление директории с файлами
