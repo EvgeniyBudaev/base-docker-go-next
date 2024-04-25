@@ -21,7 +21,7 @@ services:
       - /app
       - /app/node_modules
     env_file:
-      - ../web/.env.local
+      - ./.env
 #    depends_on:
 #      - backend
 
