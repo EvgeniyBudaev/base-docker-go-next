@@ -47,4 +47,6 @@ jobs:
             touch .env
             echo API_PORT=${{ secrets.API_PORT }} >> .env
             echo API_LOGGER_LEVEL=${{ secrets.API_LOGGER_LEVEL }} >> .env
+            echo NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }} >> .env
+            echo NEXT_PUBLIC_NODE_ENV=${{ secrets.NEXT_PUBLIC_NODE_ENV }} >> .env
             sudo docker-compose up -d --build

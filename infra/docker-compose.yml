@@ -17,6 +17,8 @@ services:
     image: ebudaev/gonext_web:v1
     container_name: web
     restart: always
+    env_file:
+      - ./.env
 #    volumes:
 #      - /app
 #      - /app/node_modules
