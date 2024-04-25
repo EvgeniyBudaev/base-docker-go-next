@@ -1,10 +1,13 @@
 import Image from "next/image";
-import styles from "./page.module.css";
-import {UserForm} from "@/app/components/UserForm";
 import Link from "next/link";
 import {ClientEnv} from "@/app/components/ClientEnv";
+import {UserForm} from "@/app/components/UserForm";
+import {Environment} from "@/app/environment";
+import styles from "./page.module.css";
 
 export default function Home() {
+  const env = Environment?.NEXT_PUBLIC_API_URL ?? "undefined";
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -43,7 +46,7 @@ export default function Home() {
           />
         </div>
         <div className={styles.block}>
-          <h4>Server ENV: {process.env?.NEXT_PUBLIC_API_URL}</h4>
+          <h4>Server ENV: {env}</h4>
         </div>
         <hr/>
         <div className={styles.block}>

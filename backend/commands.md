@@ -260,6 +260,7 @@ rm -rf nginx.conf
 ```
 http://158.160.90.159:3000
 https://158.160.90.159:3000
+https://gravity-web.ddnsking.com
 https://www.gravity-web.ddnsking.com
 ```
 
