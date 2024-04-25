@@ -154,6 +154,16 @@ sudo apt-get install build-essential
 make --version
 ```
 
+Порты, nginx
+```
+sudo apt install nginx -y
+sudo ufw allow 'Nginx Full'
+sudo ufw allow OpenSSH
+sudo ufw enable 
+sudo ufw status
+sudo systemctl start nginx
+```
+
 Удаление директории с файлами
 ```
 rm -rf base-docker-go-next/
@@ -244,9 +254,23 @@ scp nginx.conf budaev799@158.160.90.159:/home/budaev799/nginx.conf
 Удаление директории с файлами
 ```
 rm -rf docker-compose.yml
-rm -rf nginx
+rm -rf nginx.conf
 ```
 Проект доступен по адресу
 ```
 http://158.160.90.159:3000
+```
+
+Получение и настройка SSL-сертификата
+```
+sudo apt install snapd
+sudo snap install core; sudo snap refresh core
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot 
+```
+
+Получение сертификата
+```
+sudo certbot --nginx
+sudo systemctl reload nginx 
 ```
