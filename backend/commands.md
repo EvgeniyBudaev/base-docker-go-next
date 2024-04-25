@@ -181,15 +181,15 @@ sudo docker volume ls
 
 Удаление контейнера
 ```
-docker rm container_id
+sudo docker rm container_id
 ```
 Удаление всех контейнеров
 ```
-docker rm -f $(docker ps -a -q)
+sudo docker rm -f $(docker ps -a -q)
 ```
 Удаление всех образов
 ```
-docker rmi -f $(docker images -q)
+sudo docker rmi -f $(docker images -q)
 ```
 
 Удаление всех volumes
@@ -240,7 +240,6 @@ scp default.conf budaev799@<host>:/home/budaev799/nginx/default.conf
 rm -rf docker-compose.yml
 rm -rf nginx
 ```
-
 Проект доступен по адресу
 ```
 http://158.160.90.159:3000
