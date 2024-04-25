@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import {UserForm} from "@/app/components/UserForm";
 import Link from "next/link";
+import {ClientEnv} from "@/app/components/ClientEnv";
 
 export default function Home() {
   return (
@@ -41,6 +42,14 @@ export default function Home() {
               priority
           />
         </div>
+        <div className={styles.block}>
+          <h4>Server ENV: {process.env?.NEXT_PUBLIC_API_URL}</h4>
+        </div>
+        <hr/>
+        <div className={styles.block}>
+          <ClientEnv />
+        </div>
+        <hr/>
         <div className={styles.block}>
           <UserForm/>
         </div>

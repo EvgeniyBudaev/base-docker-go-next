@@ -276,3 +276,5 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 sudo certbot --nginx
 sudo systemctl reload nginx 
 ```
+
+ssh budaev799@158.160.90.159
