@@ -230,3 +230,8 @@ scp default.conf budaev799@<host>:/home/budaev799/nginx/default.conf
 rm -rf docker-compose.yml
 rm -rf nginx
 ```
+
+Проект доступен по адресу
+```
+http://158.160.90.159:3000
+```
