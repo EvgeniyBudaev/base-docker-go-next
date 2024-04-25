@@ -8,8 +8,8 @@ import (
 )
 
 type Config struct {
-	Port        string `envconfig:"SERVER_PORT"`
-	LoggerLevel string `envconfig:"LOGGER_LEVEL"`
+	Port        string `envconfig:"API_PORT"`
+	LoggerLevel string `envconfig:"API_LOGGER_LEVEL"`
 }
 
 func Load(l logger.Logger) (*Config, error) {

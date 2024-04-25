@@ -1,34 +1,27 @@
 version: "3.5"
 
 services:
-#  backend:
-#    image: ebudaev/gonext_backend:v1
-#    container_name: backend
-##    build:
-##      context: ../backend
-##      dockerfile: ../backend/backend.dockerfile
-#    restart: always
-#    ports:
-#      - "8000:8000"
-#    deploy:
-#      mode: replicated
-#      replicas: 1
+  backend:
+    image: ebudaev/gonext_backend:v1
+    container_name: backend
+    restart: always
+    ports:
+      - "8000:8000"
+    deploy:
+      mode: replicated
+      replicas: 1
+    env_file:
+      - ./.env
 
   web:
     image: ebudaev/gonext_web:v1
     container_name: web
-#    build:
-#      context: ../web
-#      dockerfile: ../web/Dockerfile
     restart: always
-#    ports:
-#      - "3000:3000"
 #    volumes:
 #      - /app
 #      - /app/node_modules
-#    depends_on:
-#      - backend
-
+    depends_on:
+      - backend
 
   nginx:
     image: nginx:1.19.3
@@ -41,4 +34,4 @@ services:
     restart: always
     depends_on:
       - web
-#      - backend
+      - backend

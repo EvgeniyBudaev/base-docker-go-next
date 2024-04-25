@@ -18,8 +18,16 @@ export const UserForm: FC = () => {
   );
 
   return (
-    <form action={formAction}>
-      <button type="submit">Get data</button>
-    </form>
+      <div>
+        <div>
+          <h3>Response get data:</h3>
+          <h4>
+            <pre>{JSON.stringify(state, null, 2)}</pre>
+          </h4>
+        </div>
+        <form action={formAction}>
+          <button type="submit">Get data</button>
+        </form>
+      </div>
   )
 }
