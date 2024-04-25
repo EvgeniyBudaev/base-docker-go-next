@@ -167,11 +167,16 @@ git clone https://github.com/EvgeniyBudaev/base-docker-go-next
 Docker
 Список контейнеров
 ```
-docker ps -a
+sudo docker ps -a
 ```
 Список всех образов
 ```
-docker image ls
+sudo docker image ls
+```
+
+Список всех volumes
+```
+sudo docker volume ls
 ```
 
 Удаление контейнера
@@ -185,6 +190,11 @@ docker rm -f $(docker ps -a -q)
 Удаление всех образов
 ```
 docker rmi -f $(docker images -q)
+```
+
+Удаление всех volumes
+```
+sudo docker volume prune
 ```
 
 Сборка docker-образа
