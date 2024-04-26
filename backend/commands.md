@@ -164,16 +164,6 @@ sudo ufw status
 sudo systemctl start nginx
 ```
 
-Удаление директории с файлами
-```
-rm -rf base-docker-go-next/
-```
-
-Клонирование
-```
-git clone https://github.com/EvgeniyBudaev/base-docker-go-next
-```
-
 Docker
 Список контейнеров
 ```
@@ -250,6 +240,12 @@ ssh budaev799@158.160.90.159
 scp docker-compose.yml budaev799@158.160.90.159:/home/budaev799/docker-compose.yml
 scp nginx.conf budaev799@158.160.90.159:/home/budaev799/nginx.conf
 scp .env budaev799@158.160.90.159:/home/budaev799/base-docker-go-next/infra/.env
+scp .env budaev799@158.160.90.159:/home/budaev799/base-docker-go-next/web/.env
+```
+
+Клонирование
+```
+git clone https://github.com/EvgeniyBudaev/base-docker-go-next
 ```
 
 Удаление директории с файлами
