@@ -16,6 +16,9 @@ services:
   web:
     image: ebudaev/gonext_web:v1
     container_name: web
+#    build:
+#      context: ../web
+#      dockerfile: ../web/Dockerfile
     restart: always
     env_file:
       - ./.env
