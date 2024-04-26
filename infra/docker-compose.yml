@@ -1,4 +1,4 @@
-version: "3.5"
+version: "3"
 
 services:
 #  backend:
@@ -20,13 +20,16 @@ services:
 #      context: ../web
 #      dockerfile: ../web/Dockerfile
     restart: always
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:8000
+      - NEXT_PUBLIC_NODE_ENV=development
 #    ports:
 #      - "3000:3000"
 #    volumes:
 #      - /app
 #      - /app/node_modules
-    env_file:
-      - ./.env
+#    env_file:
+#      - ./.env
 #    depends_on:
 #      - backend
 
