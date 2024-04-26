@@ -249,11 +249,12 @@ ssh budaev799@158.160.90.159
 ```
 scp docker-compose.yml budaev799@158.160.90.159:/home/budaev799/docker-compose.yml
 scp nginx.conf budaev799@158.160.90.159:/home/budaev799/nginx.conf
-scp .env budaev799@158.160.90.159:/home/budaev799/.env
+scp .env budaev799@158.160.90.159:/home/budaev799/base-docker-go-next/infra/.env
 ```
 
 Удаление директории с файлами
 ```
+rm -rf base-docker-go-next/
 rm -rf docker-compose.yml
 rm -rf nginx.conf
 rm -rf .env
