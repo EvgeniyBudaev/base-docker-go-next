@@ -27,8 +27,6 @@ jobs:
           context: ./web
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/gonext_web:v1
-          envkey_NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
-          envkey_NEXT_PUBLIC_NODE_ENV: ${{ secrets.NEXT_PUBLIC_NODE_ENV }}
 
   deploy:
     if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
