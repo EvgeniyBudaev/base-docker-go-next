@@ -23,6 +23,8 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push web to Docker Hub
         uses: docker/build-push-action@v2
+        run: |
+          echo "NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }}" > .env
         with:
           context: ./web
           push: true
