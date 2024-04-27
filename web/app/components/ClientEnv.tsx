@@ -1,5 +1,5 @@
 "use client"
-;
+
 import styles from "@/app/(routes)/page.module.css";
 
 export const ClientEnv = () => {
