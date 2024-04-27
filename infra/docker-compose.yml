@@ -2,8 +2,11 @@ version: "3"
 
 services:
   backend:
-    image: ebudaev/gonext_backend:v1
+#    image: ebudaev/gonext_backend:v1
     container_name: backend
+    build:
+      context: ../backend
+      dockerfile: ../backend/Dockerfile
     restart: always
     ports:
       - "8000:8000"
@@ -14,7 +17,7 @@ services:
       - ./.env
 
   web:
-    image: ebudaev/gonext_web:v1
+#    image: ebudaev/gonext_web:v1
     container_name: web
 #    build:
 #      context: ../web

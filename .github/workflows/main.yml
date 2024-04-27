@@ -2,9 +2,9 @@ name: main
 
 on:
   push:
-    branches: [ main ]
+    branches: [ mainOff ]
   pull_request:
-    branches: [ main ]
+    branches: [ mainOff ]
 
 jobs:
   build_and_push_to_docker_hub:
