@@ -1,6 +1,8 @@
 import {revalidatePath} from "next/cache";
 import {UserDetail} from "@/app/components/UserDetail";
 
+export const dynamic = "force-dynamic";
+
 async function loader() {
     console.log("user page.tsx");
     try {
@@ -13,7 +15,7 @@ async function loader() {
                 ...contentType,
             },
         };
-        const url = `http://158.160.90.159:3000/api/v1/user`;
+        const url = `http://localhost:8000/api/v1/user`;
         const response = await fetch(url, requestOptions);
 
         // Проверяем статус ответа

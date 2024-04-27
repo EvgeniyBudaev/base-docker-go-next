@@ -1,6 +1,8 @@
 import {revalidatePath} from "next/cache";
 import {ProfileDetail} from "@/app/components/ProfileDetail";
 
+export const dynamic = "force-dynamic";
+
 async function loader() {
     console.log("user page.tsx");
     try {
