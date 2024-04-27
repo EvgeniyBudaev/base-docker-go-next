@@ -14,7 +14,7 @@ services:
       mode: replicated
       replicas: 1
     env_file:
-      - ./.env
+      - ../backend/.env
 
   web:
 #    image: ebudaev/gonext_web:v1
@@ -24,7 +24,7 @@ services:
 #      dockerfile: ../web/Dockerfile
     restart: always
     env_file:
-      - ./.env
+      - ../web/.env
 #    ports:
 #      - "3000:3000"
 #    volumes:
