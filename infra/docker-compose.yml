@@ -19,19 +19,19 @@ services:
   web:
 #    image: ebudaev/gonext_web:v1
     container_name: web
-#    build:
-#      context: ../web
-#      dockerfile: ../web/Dockerfile
+    build:
+      context: ../web
+      dockerfile: ../web/Dockerfile
     restart: always
     env_file:
       - ../web/.env
+    depends_on:
+      - backend
 #    ports:
 #      - "3000:3000"
 #    volumes:
 #      - /app
 #      - /app/node_modules
-    depends_on:
-      - backend
 
   nginx:
     image: nginx:1.19.3
