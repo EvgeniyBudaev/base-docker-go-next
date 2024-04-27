@@ -1,4 +1,4 @@
 #!/bin/sh
 set -a
-. ./.env
+. /app/.env
 set +a
