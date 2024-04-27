@@ -37,7 +37,7 @@ jobs:
         with:
           context: ./web
           push: true
-          dockerfile: Dockerfile
+          dockerfile: prod.dockerfile
           buildargs: NEXT_PUBLIC_API_URL,NEXT_PUBLIC_NODE_ENV
           tags: ${{ secrets.DOCKER_USERNAME }}/gonext_web:v1
 
