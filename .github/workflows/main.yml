@@ -26,7 +26,6 @@ jobs:
         with:
           context: ./web
           push: true
-          dockerfile: prod.dockerfile
           tags: ${{ secrets.DOCKER_USERNAME }}/gonext_web:v1
 
   deploy:
