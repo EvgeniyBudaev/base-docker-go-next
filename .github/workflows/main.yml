@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2 # Проверяет доступность репозитория DockerHub для workflow
 
       - name: Build web image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/gonext_web:v1 ../../web/ -f Dockerfile
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/gonext_web:v1 web/Dockerfile -f Dockerfile
 
       - name: Login to Docker
         uses: docker/login-action@v1 # Запуск скрипта авторизации на DockerHub
