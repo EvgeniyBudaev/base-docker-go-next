@@ -15,7 +15,7 @@ services:
       replicas: 1
     env_file:
       - ../backend/.env
-      -
+
   web:
 #    image: ebudaev/gonext_web:v1
     container_name: web
