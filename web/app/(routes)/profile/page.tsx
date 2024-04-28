@@ -4,7 +4,7 @@ import {ProfileDetail} from "@/app/components/ProfileDetail";
 export const dynamic = "force-dynamic";
 
 async function loader() {
-    console.log("user page.tsx");
+    console.log("profile page.tsx");
     try {
         const contentType: { "Content-Type"?: string } = {
             "Content-Type": "application/json",

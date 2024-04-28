@@ -236,12 +236,14 @@ ssh budaev799@158.160.90.159
 
 Скопируйте файлы docker-compose.yaml и nginx.conf из проекта на сервер (на локальной машине в терминале по месту
 нахождения файла, нужно создать на сервере mkdir nginx):
+для ci/cd
 ```
 scp docker-compose.yml budaev799@158.160.90.159:/home/budaev799/docker-compose.yml
 scp nginx.conf budaev799@158.160.90.159:/home/budaev799/nginx.conf
 scp .env budaev799@158.160.90.159:/home/budaev799/.env
-
-scp .env budaev799@158.160.90.159:/home/budaev799/base-docker-go-next/infra/.env
+```
+без ci/cd
+```
 scp ../backend/.env budaev799@158.160.90.159:/home/budaev799/base-docker-go-next/backend/.env
 scp ../web/.env budaev799@158.160.90.159:/home/budaev799/base-docker-go-next/web/.env
 ```
@@ -279,4 +281,8 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 sudo certbot --nginx
 sudo systemctl reload nginx 
 ```
+
+Получение к серверу
+```
 ssh budaev799@158.160.90.159
+```
