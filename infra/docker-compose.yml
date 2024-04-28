@@ -14,7 +14,7 @@ services:
       mode: replicated
       replicas: 1
     env_file:
-      - ../backend/.env
+      - ../backend/.env.prod
 
   web:
 #    image: ebudaev/gonext_web:v1
@@ -24,7 +24,7 @@ services:
       dockerfile: ../web/Dockerfile
     restart: always
     env_file:
-      - ../web/.env
+      - ../web/.env.prod
     depends_on:
       - backend
 #    ports:
