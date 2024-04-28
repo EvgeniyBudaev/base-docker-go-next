@@ -234,15 +234,15 @@ ssh budaev799@158.160.90.159
 
 Отредактируйте файл nginx.conf и в строке server_name впишите свой IP
 
-Скопируйте файлы docker-compose.yaml и nginx.conf из проекта на сервер (на локальной машине в терминале по месту
+Из infra скопируйте файлы docker-compose.yaml и nginx.conf из проекта на сервер (на локальной машине в терминале по месту
 нахождения файла, нужно создать на сервере mkdir nginx):
-для ci/cd
+для CI/CD
 ```
 scp docker-compose.yml budaev799@158.160.90.159:/home/budaev799/docker-compose.yml
 scp nginx.conf budaev799@158.160.90.159:/home/budaev799/nginx.conf
 scp .env budaev799@158.160.90.159:/home/budaev799/.env
 ```
-без ci/cd
+без CI/CD
 ```
 scp ../backend/.env budaev799@158.160.90.159:/home/budaev799/base-docker-go-next/backend/.env
 scp ../web/.env budaev799@158.160.90.159:/home/budaev799/base-docker-go-next/web/.env
@@ -285,4 +285,10 @@ sudo systemctl reload nginx
 Получение к серверу
 ```
 ssh budaev799@158.160.90.159
+```
+
+Без CI/CD
+На сервере сборка из директории infra (незабыть скопировать env файлы в backend и web)
+```
+make up_build
 ```
