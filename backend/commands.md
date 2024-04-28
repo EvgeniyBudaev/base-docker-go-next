@@ -244,8 +244,8 @@ scp .env budaev799@158.160.90.159:/home/budaev799/.env
 ```
 без CI/CD
 ```
-scp ../backend/.env budaev799@158.160.90.159:/home/budaev799/base-docker-go-next/backend/.env
-scp ../web/.env budaev799@158.160.90.159:/home/budaev799/base-docker-go-next/web/.env
+scp ../backend/.env.prod budaev799@158.160.90.159:/home/budaev799/base-docker-go-next/backend/.env
+scp ../web/.env.prod budaev799@158.160.90.159:/home/budaev799/base-docker-go-next/web/.env
 ```
 
 Клонирование
