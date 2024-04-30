@@ -27,11 +27,9 @@ services:
       - ../web/.env
     depends_on:
       - backend
-#    ports:
-#      - "3000:3000"
-#    volumes:
-#      - /app
-#      - /app/node_modules
+    volumes:
+      - /app
+      - /app/node_modules
 
   nginx:
     image: nginx:1.19.3
