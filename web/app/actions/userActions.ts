@@ -17,7 +17,7 @@ export async function addUserAction(prevState: any, formData: FormData) {
     };
     console.log("addUserAction.ts");
     //const url = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/user/add`;
-    const url = `http://backend:8000/api/v1/user/add`;
+    const url = `http://backend:9000/api/v1/user/add`;
     const response = await fetch(url, requestOptions);
 
     // Проверяем статус ответа

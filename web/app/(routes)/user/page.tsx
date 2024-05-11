@@ -15,7 +15,7 @@ async function loader() {
                 ...contentType,
             },
         };
-        const url = `http://backend:8000/api/v1/user`;
+        const url = `http://backend:9000/api/v1/user`;
         const response = await fetch(url, requestOptions);
 
         // Проверяем статус ответа

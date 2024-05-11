@@ -9,7 +9,7 @@ services:
       dockerfile: ../backend/Dockerfile
     restart: always
     ports:
-      - "8000:8000"
+      - "9000:9000"
     deploy:
       mode: replicated
       replicas: 1
